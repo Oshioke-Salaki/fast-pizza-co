@@ -1,0 +1,30 @@
+npm create vite@latest
+npm install
+npm i eslint vite-plugin-eslint eslint-config-react-app --save-dev
+
+create .eslintrc.json
+{
+	"extends": "react-app"
+}
+
+in vite config:
+import eslint from 'vite-plugin-eslint'
+
+export defualt defineConfig({
+	plugins: [react(), eslint()],
+});
+
+
+inside src:
+index.css
+features
+	user
+	menu
+	cart
+	order
+ui
+services
+	apigrocoding.js
+	apiResturant.js
+utils
+	helpers.js
