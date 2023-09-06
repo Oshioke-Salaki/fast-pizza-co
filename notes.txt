@@ -28,3 +28,7 @@ services
 	apiResturant.js
 utils
 	helpers.js
+
+//tailwind
+npm i -D tailwindcss@3 potcss autoprefixer
+npx tailwindcss init -p
