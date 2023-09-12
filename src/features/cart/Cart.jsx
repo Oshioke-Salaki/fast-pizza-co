@@ -4,11 +4,14 @@ import Button from '../../ui/Button';
 import CartItem from '../cart/CartItem';
 import { useDispatch, useSelector } from 'react-redux';
 import { clearCart } from './cartSlice';
+import EmptyCart from './EmptyCart';
 
 function Cart() {
   const dispatch = useDispatch();
   const { username } = useSelector((store) => store.user);
   const { cart } = useSelector((store) => store.cart);
+
+  if (!cart.length) return <EmptyCart />;
 
   return (
     <div className="px-4 py-3">
@@ -18,7 +21,7 @@ function Cart() {
 
       <ul className="mt-3 divide-y divide-stone-200 border-b">
         {cart.map((item) => (
-          <CartItem item={item} key={item.key} />
+          <CartItem item={item} key={item.id} />
         ))}
       </ul>
 
