@@ -5,7 +5,14 @@ module.exports = {
     fontFamily: {
       sans: 'Roboto Mono, monospace',
     },
-    extend: {},
+    extend: {
+      colors: {
+        pizza: '#123456',
+      },
+      height: {
+        screen: '100dvh',
+      },
+    },
   },
   plugins: [],
 };
